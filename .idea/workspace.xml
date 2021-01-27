@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="873cbd44-5d90-430d-b82d-370381bdb262" name="Default Changelist" comment="Netty学习代码">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/io_netty_netty_all_4_1_20_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NettyPro.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/netty-all-4.1.20.Final-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/netty-all-4.1.20.Final-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/netty-all-4.1.20.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mlc02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/bio/BIOServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/buf/NettyByteBuf01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/buf/NettyByteBuf02.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/codec/NettyClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/codec/NettyClientHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/codec/NettyServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/codec/NettyServerHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/codec/Student.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/codec/StudentPOJO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/codec2/MyDataInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/codec2/NettyClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/codec2/NettyClientHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/codec2/NettyServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/codec2/NettyServerHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/codec2/Student.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/groupchat/GroupChatClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/groupchat/GroupChatClientHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/groupchat/GroupChatServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/groupchat/GroupChatServerHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/heartbeat/MyServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/heartbeat/MyServerHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/http/TestHttpServerHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/http/TestServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/http/TestServerInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/inboundandouthound/MyByteToLongDecoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/inboundandouthound/MyByteToLongDecoder2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/inboundandouthound/MyClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/inboundandouthound/MyClientHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/inboundandouthound/MyClientInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/inboundandouthound/MyLongToByteEncoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/inboundandouthound/MyServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/inboundandouthound/MyServerHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/inboundandouthound/MyServerInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/protocoltcp/MessageProtocol.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/protocoltcp/MyClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/protocoltcp/MyClientHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/protocoltcp/MyClientInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/protocoltcp/MyMessageDecoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/protocoltcp/MyMessageEncoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/protocoltcp/MyServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/protocoltcp/MyServerHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/protocoltcp/MyServerInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/simple/NettyClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/simple/NettyClientHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/simple/NettyServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/simple/NettyServerHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/tcp/MyClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/tcp/MyClientHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/tcp/MyClientInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/tcp/MyServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/tcp/MyServerHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/tcp/MyServerInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/websocket/MyServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/websocket/MyTextWebSocketFrameHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/netty/websocket/hello.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/nio/BasicBuffer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/nio/MappedByteBufferTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/nio/NIOByteBufferPutGet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/nio/NIOClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/nio/NIOFileChannel01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/nio/NIOFileChannel02.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/nio/NIOFileChannel03.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/nio/NIOFileChannel04.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/nio/NIOServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/nio/ReadOnlyBuffer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/nio/ScatteringNGatheringTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/nio/groupchat/GroupChatClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/nio/groupchat/GroupChatServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/nio/zerocopy/NewIOClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/nio/zerocopy/NewIOServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/nio/zerocopy/OldClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fthz/nio/zerocopy/OldServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/NettyPro.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/buf/NettyByteBuf01.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/buf/NettyByteBuf02.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/codec/NettyClient$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/codec/NettyClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/codec/NettyClientHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/codec/NettyServer$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/codec/NettyServer$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/codec/NettyServer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/codec/NettyServerHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/codec/StudentPOJO$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/codec/StudentPOJO$Student$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/codec/StudentPOJO$Student$Builder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/codec/StudentPOJO$Student.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/codec/StudentPOJO$StudentOrBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/codec/StudentPOJO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/codec2/MyDataInfo$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/codec2/MyDataInfo$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/codec2/MyDataInfo$MyMessage$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/codec2/MyDataInfo$MyMessage$Builder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/codec2/MyDataInfo$MyMessage$DataBodyCase.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/codec2/MyDataInfo$MyMessage$DataType$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/codec2/MyDataInfo$MyMessage$DataType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/codec2/MyDataInfo$MyMessage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/codec2/MyDataInfo$MyMessageOrBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/codec2/MyDataInfo$Student$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/codec2/MyDataInfo$Student$Builder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/codec2/MyDataInfo$Student.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/codec2/MyDataInfo$StudentOrBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/codec2/MyDataInfo$Worker$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/codec2/MyDataInfo$Worker$Builder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/codec2/MyDataInfo$Worker.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/codec2/MyDataInfo$WorkerOrBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/codec2/MyDataInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/codec2/NettyClient$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/codec2/NettyClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/codec2/NettyClientHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/codec2/NettyServer$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/codec2/NettyServer$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/codec2/NettyServer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/codec2/NettyServerHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/gather/GatherClient$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/gather/GatherClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/gather/GatherClientHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/gather/GatherServer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/gather/GatherServerInitializer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/groupchat/GroupChatClient$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/groupchat/GroupChatClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/groupchat/GroupChatClientHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/groupchat/GroupChatServer$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/groupchat/GroupChatServer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/groupchat/GroupChatServerHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/heartbeat/MyServer$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/heartbeat/MyServer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/heartbeat/MyServerHandler$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/heartbeat/MyServerHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/http/TestHttpServerHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/http/TestServer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/http/TestServerInitializer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/inboundandouthound/MyByteToLongDecoder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/inboundandouthound/MyByteToLongDecoder2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/inboundandouthound/MyClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/inboundandouthound/MyClientHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/inboundandouthound/MyClientInitializer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/inboundandouthound/MyLongToByteEncoder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/inboundandouthound/MyServer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/inboundandouthound/MyServerHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/inboundandouthound/MyServerInitializer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/protocoltcp/MessageProtocol.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/protocoltcp/MyClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/protocoltcp/MyClientHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/protocoltcp/MyClientInitializer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/protocoltcp/MyMessageDecoder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/protocoltcp/MyMessageEncoder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/protocoltcp/MyServer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/protocoltcp/MyServerHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/protocoltcp/MyServerInitializer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/simple/NettyClient$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/simple/NettyClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/simple/NettyClientHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/simple/NettyServer$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/simple/NettyServer$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/simple/NettyServer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/simple/NettyServerHandler$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/simple/NettyServerHandler$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/simple/NettyServerHandler$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/simple/NettyServerHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/tcp/MyClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/tcp/MyClientHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/tcp/MyClientInitializer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/tcp/MyServer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/tcp/MyServerHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/tcp/MyServerInitializer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/websocket/MyServer$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/websocket/MyServer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/netty/websocket/MyTextWebSocketFrameHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/nio/MappedByteBufferTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/nio/NIOByteBufferPutGet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/nio/NIOClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/nio/NIOFileChannel01.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/nio/NIOFileChannel02.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/nio/NIOFileChannel03.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/nio/NIOFileChannel04.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/nio/NIOServer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/nio/ReadOnlyBuffer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/nio/ScatteringNGatheringTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/nio/groupchat/GroupChatClient$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/nio/groupchat/GroupChatClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/nio/groupchat/GroupChatServer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/nio/zerocopy/NewIOClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/nio/zerocopy/NewIOServer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/nio/zerocopy/OldClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fthz/nio/zerocopy/OldServer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/log4j.properties" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-85" />
+    <option name="y" value="-15" />
+    <option name="width" value="1940" />
+    <option name="height" value="1050" />
+  </component>
+  <component name="ProjectId" id="1mS4SEDskIw2JcaXzhuh2yQepe4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="NettyPro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NettyPro" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NettyPro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NettyPro" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NettyPro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NettyPro" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NettyPro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NettyPro" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NettyPro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NettyPro" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NettyPro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NettyPro" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="fthz" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NettyPro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NettyPro" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="fthz" type="462c0819:PsiDirectoryNode" />
+              <item name="nio" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="true" />
+    <property name="Repository.Attach.Sources" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RebelAgentSelection">
+    <selection>jr</selection>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\FTHZ\LearningNetty\NettyPro" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\FTHZ\LearningNetty\NettyPro\src\main\java\com\fthz\netty\protocoltcp" />
+      <recent name="F:\FTHZ\LearningNetty\NettyPro\src\main\java\com\fthz\netty\tcp" />
+      <recent name="F:\FTHZ\LearningNetty\NettyPro\src\main\java\com\fthz\netty\codec2" />
+      <recent name="F:\FTHZ\LearningNetty\NettyPro\src\main\java\com\fthz\netty\codec" />
+      <recent name="F:\FTHZ\LearningNetty\NettyPro" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.MyClient (2)">
+    <configuration name="MyClient (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.fthz.netty.tcp.MyClient" />
+      <module name="NettyPro" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.fthz.netty.tcp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyClient (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.fthz.netty.protocoltcp.MyClient" />
+      <module name="NettyPro" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.fthz.netty.protocoltcp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.fthz.netty.inboundandouthound.MyClient" />
+      <module name="NettyPro" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.fthz.netty.inboundandouthound.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyServer (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.fthz.netty.tcp.MyServer" />
+      <module name="NettyPro" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.fthz.netty.tcp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyServer (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.fthz.netty.protocoltcp.MyServer" />
+      <module name="NettyPro" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.fthz.netty.protocoltcp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.MyClient" />
+      <item itemvalue="Application.MyServer (1)" />
+      <item itemvalue="Application.MyClient (1)" />
+      <item itemvalue="Application.MyServer (2)" />
+      <item itemvalue="Application.MyClient (2)" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MyClient (2)" />
+        <item itemvalue="Application.MyServer (2)" />
+        <item itemvalue="Application.MyClient (1)" />
+        <item itemvalue="Application.MyServer (1)" />
+        <item itemvalue="Application.MyClient" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="873cbd44-5d90-430d-b82d-370381bdb262" name="Default Changelist" comment="" />
+      <created>1609125245916</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1609125245916</updated>
+      <workItem from="1609125248882" duration="1883000" />
+      <workItem from="1609204032831" duration="986000" />
+      <workItem from="1609473223669" duration="238000" />
+      <workItem from="1609473657542" duration="12147000" />
+      <workItem from="1609550413527" duration="20438000" />
+      <workItem from="1609721405568" duration="2087000" />
+      <workItem from="1609726841896" duration="12923000" />
+      <workItem from="1609744947128" duration="16000" />
+      <workItem from="1609814493136" duration="4738000" />
+      <workItem from="1610349866364" duration="6351000" />
+      <workItem from="1610440521285" duration="4273000" />
+      <workItem from="1610446943704" duration="3181000" />
+      <workItem from="1610498550585" duration="9000" />
+      <workItem from="1610498732102" duration="362000" />
+      <workItem from="1610856326138" duration="608000" />
+      <workItem from="1610877778310" duration="648000" />
+      <workItem from="1610939308184" duration="14258000" />
+      <workItem from="1610963599379" duration="40000" />
+      <workItem from="1611045492520" duration="8047000" />
+      <workItem from="1611106130471" duration="2083000" />
+      <workItem from="1611110962209" duration="148000" />
+      <workItem from="1611111320220" duration="1102000" />
+      <workItem from="1611113482947" duration="106000" />
+      <workItem from="1611113619013" duration="2594000" />
+      <workItem from="1611124081441" duration="810000" />
+      <workItem from="1611195730729" duration="2017000" />
+      <workItem from="1611198813260" duration="9756000" />
+      <workItem from="1611219806480" duration="6571000" />
+      <workItem from="1611275653909" duration="14648000" />
+      <workItem from="1611301652974" duration="607000" />
+      <workItem from="1611373992896" duration="40000" />
+      <workItem from="1611630613990" duration="163000" />
+      <workItem from="1611749403914" duration="525000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="688000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2533512" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32956153" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Maven" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Database" order="8" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Netty学习代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="Netty学习代码" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="412" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1610958941210">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="412" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610958941210" />
+    <state x="1090" y="376" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1611198668200">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1090" y="376" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1611198668200" />
+    <state x="1247" y="233" key="#com.intellij.ide.util.MemberChooser" timestamp="1611286881584">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1247" y="233" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1611286881584" />
+    <state x="806" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1609473675954">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="806" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1609473675954" />
+    <state x="1108" y="297" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1609740106423">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1108" y="297" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1609740106423" />
+    <state x="1089" y="449" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1609571383923">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1089" y="449" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1609571383923" />
+    <state x="1008" y="369" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1609740109524">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1008" y="369" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1609740109524" />
+    <state width="449" height="466" key="DebuggerActiveHint" timestamp="1609815831255">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="449" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1609815831255" />
+    <state width="1877" height="252" key="GridCell.Tab.0.bottom" timestamp="1611298126037">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="252" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1611298126037" />
+    <state width="1877" height="252" key="GridCell.Tab.0.center" timestamp="1611298126037">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="252" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1611298126037" />
+    <state width="1877" height="252" key="GridCell.Tab.0.left" timestamp="1611298126037">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="252" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1611298126037" />
+    <state width="1877" height="252" key="GridCell.Tab.0.right" timestamp="1611298126037">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="252" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1611298126037" />
+    <state width="1860" height="270" key="GridCell.Tab.1.bottom" timestamp="1611284522588">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="270" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1611284522588" />
+    <state width="1860" height="270" key="GridCell.Tab.1.center" timestamp="1611284522588">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="270" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1611284522588" />
+    <state width="1860" height="270" key="GridCell.Tab.1.left" timestamp="1611284522588">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="270" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1611284522588" />
+    <state width="1860" height="270" key="GridCell.Tab.1.right" timestamp="1611284522588">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="270" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1611284522588" />
+    <state x="758" y="189" key="SettingsEditor" timestamp="1611374018565">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="758" y="189" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1611374018565" />
+    <state x="640" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1611275699139">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="640" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1611275699139" />
+    <state x="976" y="508" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1609732530798">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="976" y="508" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1920.1040@0.0.1920.1040" timestamp="1609732530798" />
+    <state x="1161" y="336" width="647" height="534" key="find.popup" timestamp="1611122321465">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1161" y="336" width="647" height="534" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1611122321465" />
+    <state x="1044" y="256" width="672" height="678" key="search.everywhere.popup" timestamp="1611286206300">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1044" y="256" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1611286206300" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/fthz/nio/BasicBuffer.java</url>
+          <line>9</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fthz/nio/zerocopy/OldClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="16" column="39" lean-forward="true" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fthz/nio/NIOFileChannel02.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fthz/nio/NIOFileChannel01.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fthz/netty/codec/NettyClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fthz/netty/gather/GatherServerInitializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fthz/netty/gather/GatherServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mlc02.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>NettyPro</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
