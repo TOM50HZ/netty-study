@@ -25,57 +25,61 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
 
 
-//        // super.channelRead(ctx, msg);
-//        System.out.println("Server ctx = " + ctx);
-//        ByteBuf buf = (ByteBuf) msg;
-//
-//        Channel channel = ctx.channel(); //通道
-//        ChannelPipeline pipeline = ctx.pipeline(); //管道，底层是双向链表
-//        System.out.println("客户端发送的消息是：" + buf.toString(CharsetUtil.UTF_8));
-//        System.out.println("客户端地址：" + channel.remoteAddress());
+        // super.channelRead(ctx, msg);
+        System.out.println("Server ctx = " + ctx);
+        ByteBuf buf = (ByteBuf) msg;
+
+        Channel channel = ctx.channel(); //通道
+        ChannelPipeline pipeline = ctx.pipeline(); //管道，底层是双向链表
+        System.out.println("客户端发送的消息是：" + buf.toString(CharsetUtil.UTF_8));
+        System.out.println("客户端地址：" + channel.remoteAddress());
 
 
+
+// 这一部分是TaskQueue的代码，学到2.4的时候可以把注释去掉
         //如果这里有一个费时业务 -> 异步执行 ->提交该channel对应的 NIOEventLoop的taskQueue中
 
         //解决方法一：用户自定义普通任务
-        ctx.channel().eventLoop().execute(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    Thread.sleep(10 * 1000);
-                    ctx.writeAndFlush(Unpooled.copiedBuffer("Hello,客户端2",CharsetUtil.UTF_8)); //写入缓冲并刷新，编码并发送消息
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
+//        ctx.channel().eventLoop().execute(new Runnable() {
+//            @Override
+//            public void run() {
+//                try {
+//                    Thread.sleep(10 * 1000);
+//                    ctx.writeAndFlush(Unpooled.copiedBuffer("Hello,客户端2",CharsetUtil.UTF_8)); //写入缓冲并刷新，编码并发送消息
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        });
+//
+//        //这个需要30S之后客户端才会收到回复，因为它在任务队列里的第二个任务
+//        ctx.channel().eventLoop().execute(new Runnable() {
+//            @Override
+//            public void run() {
+//                try {
+//                    Thread.sleep(20 * 1000);
+//                    ctx.writeAndFlush(Unpooled.copiedBuffer("Hello,客户端3",CharsetUtil.UTF_8)); //写入缓冲并刷新，编码并发送消息
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        });
+//
+//        //用户自定义定时任务，将会提交到scheduleTackQueue中
+//        ctx.channel().eventLoop().schedule(new Runnable() {
+//            @Override
+//            public void run() {
+//                try {
+//                    Thread.sleep(5 * 1000);
+//                    ctx.writeAndFlush(Unpooled.copiedBuffer("Hello,客户端4",CharsetUtil.UTF_8)); //写入缓冲并刷新，编码并发送消息
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        }, 5, TimeUnit.SECONDS);
+//        System.out.println("go on...");
 
-        //这个需要30S之后客户端才会收到回复，因为它在任务队列里的第二个任务
-        ctx.channel().eventLoop().execute(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    Thread.sleep(20 * 1000);
-                    ctx.writeAndFlush(Unpooled.copiedBuffer("Hello,客户端3",CharsetUtil.UTF_8)); //写入缓冲并刷新，编码并发送消息
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
 
-        //用户自定义定时任务，将会提交到scheduleTackQueue中
-        ctx.channel().eventLoop().schedule(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    Thread.sleep(5 * 1000);
-                    ctx.writeAndFlush(Unpooled.copiedBuffer("Hello,客户端4",CharsetUtil.UTF_8)); //写入缓冲并刷新，编码并发送消息
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        }, 5, TimeUnit.SECONDS);
-        System.out.println("go on...");
     }
 
     //数据读取完毕
